@@ -1,30 +1,37 @@
-RUNUT
+RUNUT — Deskripsi Website
 
-Runut adalah aplikasi web untuk memeriksa pola tulisan berbahasa Indonesia. Pengguna memasukkan teks lalu sistem menandai bagian yang perlu diperbaiki beserta sarannya. Pengguna lalu dapat memproses saran, mengunduh hasil, serta menyimpan dan membuka kembali dokumen dari riwayat.
+Runut adalah aplikasi web untuk memeriksa pola tulisan berbahasa Indonesia.
+Pengguna menempelkan teks, lalu sistem menandai bagian yang perlu diperbaiki
+beserta sarannya. Cocok untuk tugas, esai, laporan, dan paper sebelum dikumpulkan.
 
-Aplikasi terdiri atas 5 halaman dan 8 komponen. Halaman meliputi Beranda, Tentang, Auth, Analisis, dan Riwayat. Auth bersifat opsional. Analisis memuat masukan dan hasil dalam satu halaman. Riwayat memuat daftar dan pratinjau dalam satu halaman.
+Yang diperiksa (6 aspek):
+1. Pengulangan Kata — kata yang muncul berulang ditandai dan diberi alternatif sinonim.
+2. Pola Kalimat — kalimat yang terlalu panjang (>30 kata) disarankan untuk dipecah.
+3. Kemiripan Teks — pasangan kalimat yang mirip ditandai lengkap dengan persentasenya.
+4. Indikasi AI — frasa generik khas teks generatif, ritme kalimat yang seragam, dan kata yang itu-itu saja.
+5. Tingkat Formalitas — kata tidak baku (mis. gak, banget, aja, tapi) disarankan ke bentuk formal.
+6. Konsistensi Gaya — peralihan kata ganti yang tidak konsisten (mis. saya / aku) diingatkan.
 
-Daftar use case:
-UC01 Mendaftar akun
-UC02 Masuk ke akun
-UC03 Keluar dari akun
-UC04 Menampilkan Beranda
-UC05 Menampilkan Tentang beserta latar belakang
-UC06 Membuat analisis baru
-UC07 Membaca hasil analisis
-UC08 Memperbarui hasil analisis
-UC09 Menyalin hasil revisi
-UC10 Mengunduh hasil
-UC11 Menyimpan dokumen ke riwayat
-UC12 Membaca riwayat
-UC13 Melanjutkan dokumen dari riwayat
-UC14 Menghapus dokumen dari riwayat
-UC15 Menampilkan tampilan responsif
+Cara kerja (3 langkah):
+1. Tempel tulisan — salin-tempel teks, unggah berkas .txt / .pdf, atau pakai teks contoh, lalu jalankan analisis.
+2. Tinjau sorotan — bagian bermasalah diberi garis bawah. Klik sorotan untuk melihat saran, nilai skor, ringkasan per kategori, dan perbandingan sebelum vs sesudah.
+3. Proses satu per satu — setiap saran dapat diterima, ditolak, diubah manual, atau terima semua sekaligus. Hasil revisi bisa disalin dan diunduh (.txt / .pdf).
 
-Keterangan:
-UC06 meliputi tempel teks, unggah txt, unggah pdf, pakai contoh, dan jalankan analisis.
-UC07 meliputi nilai, sorotan teks, filter kategori, dan perbandingan sebelum dengan sesudah.
-UC08 meliputi terima saran, tolak saran, ubah saran, dan terima semua saran.
-UC10 meliputi unduh txt dan unduh pdf.
-UC12 meliputi daftar dokumen, cari judul, dan pratinjau detail.
-UC15 meliputi tampilan ponsel, tablet, dan laptop.
+Halaman website (5 halaman):
+- Beranda (/) — hero, 6 aspek pemeriksaan, langkah kerja, tombol mulai.
+- Tentang (/tentang) — cerita kenapa Runut dibuat, prinsip, dan latar belakang.
+- Auth (/masuk) — masuk dan daftar dalam satu halaman (tab). Bersifat opsional, tanpa login tetap bisa analisis.
+- Analisis (/analisis) — masukan teks dan hasil analisis dalam satu halaman.
+- Riwayat (/riwayat) — daftar dokumen tersimpan, cari judul, pratinjau detail, lanjutkan edit, dan hapus.
+
+Akun dan riwayat:
+Pengguna dapat mendaftar, masuk, dan keluar. Dokumen hasil analisis dapat disimpan
+ke riwayat, dibuka kembali pratinjaunya, dilanjutkan untuk diedit ulang, dan dihapus.
+Semua data akun dan riwayat tersimpan di peramban (localStorage) — tidak ada server,
+tidak ada data yang dikirim ke pihak lain. Jika berganti peramban atau menghapus
+data situs, riwayat ikut terhapus.
+
+Prinsip:
+1. Pengguna yang memutuskan — saran hanya rekomendasi, tidak ada perubahan otomatis.
+2. Hanya menandai pola — yang dinilai adalah pola pada teks, bukan penulisnya.
+3. Responsif — tampilan menyesuaikan layar ponsel, tablet, dan laptop.
