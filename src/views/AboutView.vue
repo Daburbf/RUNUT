@@ -1,37 +1,36 @@
-<script setup>
+﻿<script setup>
 import BaseButton from '../components/BaseButton.vue'
-import SectionLabel from '../components/SectionLabel.vue'
+import SectionHeading from '../components/SectionHeading.vue'
 import BaseCard from '../components/BaseCard.vue'
 </script>
 
 <template>
   <div>
     <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
-      <SectionLabel>Tentang</SectionLabel>
+      <SectionHeading>Tentang</SectionHeading>
       <h1 class="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.9] tracking-tighter md:text-7xl">
         Kenapa ada Runut?
       </h1>
       <div class="mt-8 grid gap-8 md:grid-cols-[7fr_5fr]">
         <div class="space-y-5 text-[15px] leading-8 text-black/80">
           <p>
-            Jujur aja, Runut ini awalnya tugas kuliah. Disuruh bikin web pakai Vue sama Tailwind,
-            ada routing, ada form, harus responsif, ya udah sekalian bikin yang kepake aja.
+            Runut adalah alat bantu untuk memeriksa pola tulisan berbahasa Indonesia.
+            Cukup tempel teks, sistem akan menandai bagian yang perlu perhatian beserta saran perbaikannya.
           </p>
           <p>
-            Masalahnya simpel dan sering kejadian: kita nulis, berasa udah bagus, pas dibaca ulang
-            ternyata kata yang sama muncul berkali-kali. Atau satu kalimat panjangnya nggak kira-kira.
-            Kadang juga bahasanya kaku, kayak hasil tempelan AI. Nah itu yang pengin ditangkep Runut.
+            Hal yang diperiksa bersifat praktis. Pengulangan kata, kalimat yang terlalu panjang,
+            kalimat yang saling mirip, frasa generik yang sering muncul pada teks generatif,
+            kata tidak baku, serta gaya bahasa yang tidak konsisten.
           </p>
           <p>
-            Jadi cara kerjanya nggak neko-neko. Kamu tempel tulisan, Runut yang bacain polanya,
-            bagian yang janggal ditandain. Udah gitu aja. Keputusan tetap di kamu, mau dipakai
-            sarannya atau dibiarin. Nggak ada yang otomatis diubah tanpa izin.
+            Semua keputusan tetap di tangan pengguna. Setiap saran dapat diterima, ditolak,
+            atau disesuaikan secara manual. Tidak ada perubahan otomatis tanpa persetujuan.
           </p>
           <BaseCard class="border-l-4 !border-l-[#FF3000] p-5">
             <p class="text-sm leading-7">
-              Catatan: semua data akun sama riwayat disimpen di browser kamu sendiri (localStorage).
-              Nggak ada server, nggak dikirim ke mana-mana. Kalau ganti browser atau hapus data,
-              ya ilang. Maklum, versi tugas kuliah.
+              Catatan: data akun dan riwayat tersimpan di peramban masing masing (localStorage).
+              Tidak ada server dan tidak ada data yang dikirim ke pihak lain.
+              Jika berganti peramban atau menghapus data situs, riwayat ikut terhapus.
             </p>
           </BaseCard>
         </div>
@@ -41,24 +40,68 @@ import BaseCard from '../components/BaseCard.vue'
             <ul class="mt-4 space-y-4">
               <li class="flex gap-3">
                 <span class="font-mono font-black text-[#FF3000]">01</span>
-                <p class="text-sm leading-6"><b class="uppercase">Kamu yang mutusin.</b><br /><span class="text-white/60">Saran cuma saran. Terima, tolak, atau ubah sendiri.</span></p>
+                <p class="text-sm leading-6"><b class="uppercase">Anda yang memutuskan.</b><br /><span class="text-white/60">Saran hanya rekomendasi. Terima, tolak, atau sesuaikan sendiri.</span></p>
               </li>
               <li class="flex gap-3">
                 <span class="font-mono font-black text-[#FF3000]">02</span>
-                <p class="text-sm leading-6"><b class="uppercase">Nggak sok tahu.</b><br /><span class="text-white/60">Yang ditandain cuma pola yang kelihatan. Bukan nilai tulisanmu.</span></p>
+                <p class="text-sm leading-6"><b class="uppercase">Hanya menandai pola.</b><br /><span class="text-white/60">Yang ditandai adalah pola yang terlihat pada teks, bukan penilaian atas penulis.</span></p>
               </li>
               <li class="flex gap-3">
                 <span class="font-mono font-black text-[#FF3000]">03</span>
-                <p class="text-sm leading-6"><b class="uppercase">Bisa dibuka di HP.</b><br /><span class="text-white/60">Layoutnya ngikutin layar, dari HP sampai laptop.</span></p>
+                <p class="text-sm leading-6"><b class="uppercase">Responsif.</b><br /><span class="text-white/60">Tampilan menyesuaikan layar ponsel, tablet, dan laptop.</span></p>
               </li>
             </ul>
           </div>
           <div class="swiss-dots border-2 border-black bg-[#F2F2F2] p-6">
-            <p class="font-mono text-xs uppercase tracking-widest">Dibuat oleh</p>
-            <p class="mt-2 font-black uppercase tracking-tight">Mahasiswa — Balikpapan, 2026</p>
-            <p class="mt-1 text-sm text-black/60">Vue 3 + Tailwind. Kalau ada bug, dimaklumi ya.</p>
-            <BaseButton to="/analisis" class="mt-4">Coba analisis</BaseButton>
+            <p class="font-mono text-xs uppercase tracking-widest">Mulai dari sini</p>
+            <p class="mt-2 font-black uppercase tracking-tight">Periksa tulisan sebelum dikumpulkan</p>
+            <p class="mt-1 text-sm text-black/60">Tempel teks, tinjau sarannya, lalu simpan hasilnya.</p>
+            <BaseButton to="/analisis" class="mt-4">Mulai analisis</BaseButton>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latar belakang Runut -->
+    <section class="border-t-4 border-black bg-[#F2F2F2]">
+      <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
+        <SectionHeading>Latar belakang</SectionHeading>
+        <div class="mt-6 grid gap-8 md:grid-cols-[5fr_7fr] md:items-end">
+          <h2 class="text-4xl font-black uppercase leading-[0.95] tracking-tighter md:text-6xl">Alasan web ini dibuat</h2>
+          <p class="text-black/70 md:pb-1">Masalah yang sering terjadi di perkuliahan dan cara Runut membantu.</p>
+        </div>
+        <div class="mt-8 grid gap-4 md:grid-cols-2">
+          <BaseCard class="p-6 sm:p-8">
+            <p class="font-mono text-xs uppercase tracking-widest text-[#FF3000]">01 / Kondisi saat ini</p>
+            <div class="mt-4 space-y-4 text-[15px] leading-8 text-black/80">
+              <p>
+                Penggunaan AI generatif semakin umum untuk menyusun laporan, esai, dan paper.
+                Prosesnya cepat, tetapi di lingkungan perkuliahan hal ini menimbulkan persoalan baru.
+              </p>
+              <p>
+                Dosen kini memeriksa indikasi penggunaan AI sebelum menilai isi tulisan.
+                Jika sebuah naskah dinilai mirip hasil AI, nilainya dapat turun atau penulis diminta merevisi total.
+              </p>
+            </div>
+          </BaseCard>
+          <BaseCard class="p-6 sm:p-8">
+            <p class="font-mono text-xs uppercase tracking-widest text-[#FF3000]">02 / Peran Runut</p>
+            <div class="mt-4 space-y-4 text-[15px] leading-8 text-black/80">
+              <p>
+                Runut membantu penulis memeriksa naskahnya sendiri sebelum dikumpulkan.
+                Bagian yang terdengar kaku, generik, atau menyerupai pola teks AI ditandai lebih awal
+                agar dapat diperbaiki dengan bahasa sendiri.
+              </p>
+              <p>
+                Tujuannya sederhana. Gagasan tetap berasal dari penulis, Runut membantu merapikan polanya
+                sehingga naskah siap dikumpulkan dengan tenang.
+              </p>
+            </div>
+          </BaseCard>
+        </div>
+        <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+          <BaseButton to="/analisis">Periksa tulisan sekarang</BaseButton>
+          <BaseButton to="/" variant="secondary">Kembali ke beranda</BaseButton>
         </div>
       </div>
     </section>

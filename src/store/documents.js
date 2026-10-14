@@ -1,4 +1,5 @@
-// Dokumen & riwayat pemeriksaan per pengguna
+// Dokumen & riwayat pemeriksaan. Tanpa login memakai ruang 'tamu',
+// dengan login memakai ruang per akun. Keduanya tersimpan lokal.
 import { auth } from './auth'
 
 const storage = (mode) => {
@@ -17,7 +18,7 @@ const fallback = (mode) => ({
 const ls = () => storage('local') ?? fallback('local')
 const ss = () => storage('session') ?? fallback('session')
 
-const key = () => `runut_docs_${auth.user?.id}`
+const key = () => `runut_docs_${auth.user?.id ?? 'tamu'}`
 const all = () => { try { return JSON.parse(ls().getItem(key())) ?? [] } catch { return [] } }
 const persist = (docs) => { try { ls().setItem(key(), JSON.stringify(docs)) } catch {} }
 

@@ -50,10 +50,10 @@ function logout() {
           <BaseButton variant="secondary" size="sm" @click="logout">Keluar</BaseButton>
         </template>
         <template v-else>
-          <router-link to="/masuk" class="swiss-nav-link text-xs font-bold uppercase tracking-widest text-black">
+          <router-link :to="{ path: '/masuk', query: { mode: 'masuk' } }" class="swiss-nav-link text-xs font-bold uppercase tracking-widest text-black">
             <span data-label="Masuk">Masuk</span>
           </router-link>
-          <BaseButton to="/daftar" size="sm">Daftar</BaseButton>
+          <BaseButton :to="{ path: '/masuk', query: { mode: 'daftar' } }" size="sm">Daftar</BaseButton>
         </template>
       </div>
 
@@ -71,8 +71,8 @@ function logout() {
         <div class="mt-3 flex flex-col gap-2 border-t-2 border-black pt-4">
           <BaseButton v-if="auth.user" variant="secondary" @click="logout">Keluar ({{ auth.user.name }})</BaseButton>
           <template v-else>
-            <BaseButton to="/masuk" variant="secondary">Masuk</BaseButton>
-            <BaseButton to="/daftar">Daftar</BaseButton>
+            <BaseButton :to="{ path: '/masuk', query: { mode: 'masuk' } }" variant="secondary">Masuk</BaseButton>
+            <BaseButton :to="{ path: '/masuk', query: { mode: 'daftar' } }">Daftar</BaseButton>
           </template>
         </div>
       </div>

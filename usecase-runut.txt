@@ -1,28 +1,30 @@
 RUNUT
 
-Runut itu web buat bantu ngecek tulisan Bahasa Indonesia.
-Caranya gampang, tinggal tempel tulisan, nanti kelihatan bagian mana yang janggal, kaku, atau kedengeran kayak hasil AI. Tiap bagian dikasih saran biar enak dibaca, terus bisa diterima satu-satu atau langsung semua. Hasilnya bisa disalin, diunduh, sama disimpen di riwayat.
+Runut adalah aplikasi web untuk memeriksa pola tulisan berbahasa Indonesia. Pengguna memasukkan teks lalu sistem menandai bagian yang perlu diperbaiki beserta sarannya. Pengguna lalu dapat memproses saran, mengunduh hasil, serta menyimpan dan membuka kembali dokumen dari riwayat.
+
+Aplikasi terdiri atas 5 halaman dan 8 komponen. Halaman meliputi Beranda, Tentang, Auth, Analisis, dan Riwayat. Auth bersifat opsional. Analisis memuat masukan dan hasil dalam satu halaman. Riwayat memuat daftar dan pratinjau dalam satu halaman.
 
 Daftar use case:
-UC-01 Daftar akun
-UC-02 Masuk
-UC-03 Keluar
-UC-04 Lihat beranda
-UC-05 Lihat tentang
-UC-06 Tempel tulisan
-UC-07 Upload .txt
-UC-08 Lihat nilai
-UC-09 Klik sorotan
-UC-10 Terima saran
-UC-11 Tolak saran
-UC-12 Ubah saran
-UC-13 Terima semua
-UC-14 Bandingkan hasil
-UC-15 Salin revisi
-UC-16 Unduh .txt
-UC-17 Simpan ke riwayat
-UC-18 Cari di riwayat
-UC-19 Buka detail dokumen
-UC-20 Lanjut dari riwayat
-UC-21 Hapus dari riwayat
-UC-22 Tampilan HP/tablet/laptop
+UC01 Mendaftar akun
+UC02 Masuk ke akun
+UC03 Keluar dari akun
+UC04 Menampilkan Beranda
+UC05 Menampilkan Tentang beserta latar belakang
+UC06 Membuat analisis baru
+UC07 Membaca hasil analisis
+UC08 Memperbarui hasil analisis
+UC09 Menyalin hasil revisi
+UC10 Mengunduh hasil
+UC11 Menyimpan dokumen ke riwayat
+UC12 Membaca riwayat
+UC13 Melanjutkan dokumen dari riwayat
+UC14 Menghapus dokumen dari riwayat
+UC15 Menampilkan tampilan responsif
+
+Keterangan:
+UC06 meliputi tempel teks, unggah txt, unggah pdf, pakai contoh, dan jalankan analisis.
+UC07 meliputi nilai, sorotan teks, filter kategori, dan perbandingan sebelum dengan sesudah.
+UC08 meliputi terima saran, tolak saran, ubah saran, dan terima semua saran.
+UC10 meliputi unduh txt dan unduh pdf.
+UC12 meliputi daftar dokumen, cari judul, dan pratinjau detail.
+UC15 meliputi tampilan ponsel, tablet, dan laptop.

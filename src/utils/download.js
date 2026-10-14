@@ -3,3 +3,8 @@ export function downloadText(filename, content) {
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename; a.click()
   URL.revokeObjectURL(a.href)
 }
+
+export function downloadBlob(filename, blob) {
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = filename; a.click()
+  URL.revokeObjectURL(a.href)
+}
