@@ -1,0 +1,1 @@
+import{_ as o}from"./SectionHeading-DPDKNlO8.js";import{o as r,c as s,A as t}from"./index-za6FYls0.js";const c={},n={class:"rounded-none border-2 border-black bg-white"};function a(e,d){return r(),s("div",n,[t(e.$slots,"default")])}const f=o(c,[["render",a]]);export{f as B};
