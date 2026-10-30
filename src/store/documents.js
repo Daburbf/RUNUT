@@ -1,6 +1,7 @@
 // Dokumen & riwayat pemeriksaan. Tanpa login memakai ruang 'tamu',
 // dengan login memakai ruang per akun. Keduanya tersimpan lokal.
 import { auth } from './auth'
+import { DEMO_DOCS } from '../utils/dummy'
 
 const storage = (mode) => {
   try {
@@ -25,8 +26,16 @@ const persist = (docs) => { try { ls().setItem(key(), JSON.stringify(docs)) } ca
 // Draf aktif (dokumen yang sedang dianalisis)
 let current = null
 
+// Isi data contoh sekali per ruang (tamu / akun) supaya Riwayat tidak kosong.
+const seed = () => {
+  const flag = 'runut_seed_' + key()
+  if (ls().getItem(flag)) return
+  try { ls().setItem(flag, '1') } catch {}
+  if (!all().length) persist(DEMO_DOCS)
+}
+
 export const documents = {
-  list: () => all().sort((a, b) => b.updated_at - a.updated_at),
+  list: () => (seed(), all().sort((a, b) => b.updated_at - a.updated_at)),
   get: (id) => all().find((d) => d.id === id),
   setCurrent(doc) { current = doc; try { ss().setItem('runut_current', JSON.stringify(doc)) } catch {} },
   getCurrent() { try { return current ?? JSON.parse(ss().getItem('runut_current') || 'null') } catch { return current } },

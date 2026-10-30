@@ -26,7 +26,7 @@ const keys = Object.keys(CATEGORIES)
       <div class="mx-auto grid max-w-6xl md:grid-cols-[8fr_4fr]">
         <div class="px-4 py-14 sm:px-6 md:py-24">
           <SectionHeading>01 / Sistem — Analisis Pola Tulisan</SectionHeading>
-          <h1 class="mt-6 text-6xl font-black uppercase leading-[0.9] tracking-tighter sm:text-7xl md:text-8xl">
+          <h1 class="mt-6 text-[2.75rem] font-black uppercase leading-[0.9] tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl">
             Tulisan Anda,<br />lebih <span class="bg-[#FF3000] px-2 text-white">runut</span>.
           </h1>
           <p class="mt-6 max-w-xl text-base leading-relaxed text-black/70">
@@ -43,7 +43,7 @@ const keys = Object.keys(CATEGORIES)
             <p class="font-mono text-xs uppercase tracking-widest"><span class="text-2xl font-black">ID</span><br />Bahasa Indonesia</p>
           </div>
         </div>
-        <div class="relative min-h-[480px] overflow-hidden border-l-4 border-black bg-[#F2F2F2] md:flex" aria-hidden="true">
+        <div class="relative min-h-[260px] overflow-hidden border-t-4 border-black bg-[#F2F2F2] sm:min-h-[380px] md:min-h-[480px] md:border-l-4 md:border-t-0 md:flex" aria-hidden="true">
           <img src="/images/yunani.png" alt="" class="absolute inset-0 h-full w-full object-cover" />
         </div>
       </div>
@@ -97,7 +97,7 @@ const keys = Object.keys(CATEGORIES)
     <section class="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-24">
       <div class="border-4 border-black bg-black p-8 text-white md:p-16">
         <SectionHeading>04 / Mulai</SectionHeading>
-        <h2 class="mt-6 max-w-3xl text-4xl font-black uppercase leading-[0.95] tracking-tighter md:text-7xl">Periksa Naskah Anda Sekarang.</h2>
+        <h2 class="mt-6 max-w-3xl text-3xl font-black uppercase leading-[0.95] tracking-tighter sm:text-4xl md:text-7xl">Periksa Naskah Anda Sekarang.</h2>
         <p class="mt-4 max-w-xl text-white/60">Tanpa login. Langsung tempel teks dan lihat hasilnya.</p>
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
           <BaseButton to="/analisis" variant="accent" size="lg">Mulai Menulis</BaseButton>

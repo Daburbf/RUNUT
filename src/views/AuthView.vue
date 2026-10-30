@@ -17,7 +17,7 @@ watch(() => route.query.mode, (v) => {
   ok.value = ''
 })
 
-const login = ref({ email: '', password: '' })
+const login = ref({ email: 'demo@runut.id', password: 'runut123' })
 const reg = ref({ name: '', email: '', password: '', confirm: '' })
 const err = ref({})
 const ok = ref('')
@@ -97,6 +97,7 @@ function switchMode(m) {
             <p v-if="err.general" class="border-2 border-black bg-black px-3 py-2 text-sm font-bold uppercase tracking-wide text-white"><span class="text-[#FF3000]">■</span> {{ err.general }}</p>
             <p v-if="ok" class="border-2 border-black bg-[#F2F2F2] px-3 py-2 text-sm font-bold uppercase tracking-wide"><span class="text-[#FF3000]">■</span> {{ ok }}</p>
             <BaseButton type="submit" class="w-full">Masuk</BaseButton>
+            <p class="border-2 border-black bg-[#F2F2F2] px-3 py-2 font-mono text-[11px] uppercase tracking-widest">Akun demo: demo@runut.id · runut123</p>
           </form>
           <p class="mt-6 border-t-2 border-black pt-6 text-center text-sm">Belum memiliki akun?
             <button class="font-bold uppercase tracking-wide underline decoration-[#FF3000] decoration-2 underline-offset-4 hover:text-[#FF3000]" @click="switchMode('daftar')">Daftar</button>

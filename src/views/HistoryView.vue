@@ -34,7 +34,7 @@ function confirmRemove() { documents.remove(target.value.id); refresh(); if (ope
     <div class="grid gap-8 md:grid-cols-[5fr_7fr] md:items-end">
       <div>
         <SectionHeading>Riwayat</SectionHeading>
-        <h1 class="mt-4 text-5xl font-black uppercase leading-[0.9] tracking-tighter md:text-6xl">Riwayat Pemeriksaan</h1>
+        <h1 class="mt-4 text-4xl font-black uppercase leading-[0.9] tracking-tighter sm:text-5xl md:text-6xl">Riwayat Pemeriksaan</h1>
       </div>
       <div class="relative">
         <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-sm"></i>

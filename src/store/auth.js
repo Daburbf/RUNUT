@@ -28,6 +28,14 @@ const save = (k, v) => { try { ls().setItem(k, JSON.stringify(v)) } catch {} }
 // Hash sederhana (simulasi hashing kata sandi)
 const hash = (s) => { let h = 0; for (const c of s) h = (h * 31 + c.charCodeAt(0)) | 0; return 'h' + (h >>> 0).toString(16) }
 
+// Akun demo supaya halaman Masuk bisa langsung dicoba tanpa mendaftar.
+const DEMO = { id: 1, name: 'Pengguna Demo', email: 'demo@runut.id', password_hash: hash('runut123') }
+const seedUsers = () => {
+  const users = load(USERS_KEY, [])
+  if (!users.some((u) => u.email === DEMO.email)) save(USERS_KEY, [DEMO, ...users])
+}
+try { seedUsers() } catch {}
+
 export const auth = reactive({
   user: load(SESSION_KEY, null),
 

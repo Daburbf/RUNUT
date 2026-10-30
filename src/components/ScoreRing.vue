@@ -1,4 +1,4 @@
-<script setup>
+﻿<script setup>
 import { computed } from 'vue'
 const props = defineProps({ score: Number })
 // Dokumentasi: skor Swiss = angka raksasa hitam + bilah blok merah.
@@ -8,7 +8,7 @@ const grade = computed(() => (props.score >= 80 ? 'AMAN' : props.score >= 55 ? '
 </script>
 <template>
   <div class="flex items-end gap-6">
-    <p class="text-7xl font-black leading-none tracking-tighter sm:text-8xl">{{ score }}</p>
+    <p class="text-6xl font-black leading-none tracking-tighter sm:text-7xl lg:text-8xl">{{ score }}</p>
     <div class="flex-1 pb-2">
       <p class="mb-2 inline-block bg-[#FF3000] px-2 py-1 font-mono text-[11px] font-bold uppercase tracking-widest text-white">{{ grade }}</p>
       <div class="h-4 w-full border-2 border-black bg-white" role="img" :aria-label="`Skor ${score} dari 100`">

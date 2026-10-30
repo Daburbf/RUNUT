@@ -145,7 +145,7 @@ function resetAll() {
       <div class="grid gap-8 md:grid-cols-[5fr_7fr]">
         <div>
           <SectionHeading>Analisis Baru</SectionHeading>
-          <h1 class="mt-4 text-5xl font-black uppercase leading-[0.9] tracking-tighter md:text-6xl">Periksa tulisan Anda</h1>
+          <h1 class="mt-4 text-4xl font-black uppercase leading-[0.9] tracking-tighter sm:text-5xl md:text-6xl">Periksa tulisan Anda</h1>
           <p class="mt-4 text-black/70">Salin dan tempel teks atau unggah berkas .txt dan .pdf. Hasil analisis akan tampil di halaman yang sama.</p>
           <div class="swiss-dots mt-8 border-2 border-black bg-[#F2F2F2] p-6">
             <p class="font-mono text-xs uppercase tracking-widest text-[#FF3000]">Ketentuan</p>
@@ -189,7 +189,7 @@ function resetAll() {
         <SectionHeading>Hasil Analisis</SectionHeading>
         <div class="mb-8 mt-4 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 class="max-w-3xl text-4xl font-black uppercase leading-[0.95] tracking-tighter md:text-6xl">{{ doc.title }}</h2>
+            <h2 class="max-w-3xl text-3xl font-black uppercase leading-[0.95] tracking-tighter sm:text-4xl md:text-6xl">{{ doc.title }}</h2>
             <p class="mt-3 font-mono text-xs uppercase tracking-widest text-black/60">{{ doc.result.words_count }} kata · {{ doc.result.sentences_count }} kalimat · {{ doc.result.issues.length }} temuan</p>
           </div>
           <div class="flex flex-wrap gap-2">

@@ -8,7 +8,7 @@ import BaseCard from '../components/BaseCard.vue'
   <div>
     <section class="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-16">
       <SectionHeading>Tentang</SectionHeading>
-      <h1 class="mt-4 max-w-3xl text-5xl font-black uppercase leading-[0.9] tracking-tighter md:text-7xl">
+      <h1 class="mt-4 max-w-3xl text-4xl font-black uppercase leading-[0.9] tracking-tighter sm:text-5xl md:text-7xl">
         Kenapa ada Runut?
       </h1>
       <div class="mt-8 grid gap-8 md:grid-cols-[7fr_5fr]">
